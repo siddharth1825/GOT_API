@@ -1,0 +1,48 @@
+body{
+    background-color: black;
+}
+
+#charactersList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+.character {
+    list-style-type: none;
+    background-color: #a85a00;
+    border-radius: 1rem;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'name image'
+        'family image';
+    text-align: left;
+}
+
+.character > h2 {
+    grid-area: name;
+    margin-bottom: 0px;
+}
+
+.character > p {
+    grid-area: family;
+    margin: 0;
+    margin-top: -18px;
+}
+
+.character > img {
+    height: 150px;
+    width: 150px;
+    grid-area: image;
+}
+
+.title {
+    color: #eaeaea;
+}
+
+.navbar {
+    background-color: #a85a00;
+}
